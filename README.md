@@ -33,9 +33,9 @@ Scan a file...
 ```python cli_tools/scanfile.osx.py /var/log/wifi.log
  - Fetching Token
  - Checking Hash
-*** No intelligence about file, submitting for analysis ***
+ - No intelligence about file, submitting for analysis
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100  234k    0    20  100  234k      4  55387  0:00:04  0:00:04 --:--:--     0
  -  Waiting for scan result
- *** /var/log/wifi.log is safe```
+ + /var/log/wifi.log is safe```
