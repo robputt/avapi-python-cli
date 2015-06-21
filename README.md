@@ -22,7 +22,7 @@ Clone the AVAPI Python CLI repo...
 
 Edit file to contain your API key, replace INSERT YOUR API KEY HERE with your API Key, if you require an API key visit https://www.avapi.co...
 
-```sed -i '' 's/<apikey>/INSERT YOUR API KEY HERE/g' cli_tools/scanfile.osx.py```
+```sed -i 's/<apikey>/INSERT YOUR API KEY HERE/g' cli_tools/scanfile.linux.py```
 
 #### OSX
 Simple instructions to get you started, if you are experienced you may want to skip these instructions and do your own thing. To get up and running simply perform the following in a terminal entering your sudo password when requested (copy and paste friendly).
