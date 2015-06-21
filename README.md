@@ -19,10 +19,23 @@ Clone the AVAPI Python CLI repo...
 
 ```git clone https://github.com/AVAPI/avapi-python-cli.git; cd avapi-python-cli```
 
-Edit file to contain your API key...
+Edit file to contain your API key, replace INSERT YOUR API KEY HERE with your API Key, if you require an API key visit https://www.avapi.co...
 
-```sed -i 's\<changeme_apikey>\INSERT YOUR API KEY HERE\g' cli_tools/scanfile.osx.py```
+```sed -i '' 's/<apikey>/INSERT YOUR API KEY HERE/g' cli_tools/scanfile.osx.py```
 
 Scan a file...
 
-``````
+```python cli_tools/scanfile.osx.py <path_to_file>```
+
+### Usage
+#### OSX
+
+```python cli_tools/scanfile.osx.py /var/log/wifi.log
+ - Fetching Token
+ - Checking Hash
+*** No intelligence about file, submitting for analysis ***
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  234k    0    20  100  234k      4  55387  0:00:04  0:00:04 --:--:--     0
+ -  Waiting for scan result
+ *** /var/log/wifi.log is safe```
