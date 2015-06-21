@@ -7,7 +7,10 @@ Simple instructions to get you started, if you are experienced you may want to s
 Install Python setup tools...
 
 ```
-curl -o setuptools.tar.gz https://pypi.python.org/packages/source/s/setuptools/setuptools-17.1.1.tar.gz#md5=7edec6cc30aca5518fa9bad42ff0179b; tar -xvf setuptools.tar.gz; cd setuptools-17.1.1; sudo python setup.py install
+curl -o setuptools.tar.gz https://pypi.python.org/packages/source/s/setuptools/setuptools-17.1.1.tar.gz#md5=7edec6cc30aca5518fa9bad42ff0179b
+tar -xvf setuptools.tar.gz
+cd setuptools-17.1.1
+sudo python setup.py install
 ```
 
 Install Python requests module...
