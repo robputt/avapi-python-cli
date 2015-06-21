@@ -15,4 +15,14 @@ Install Python requests module...
 
 ```sudo easy_install requests```
 
+Clone the AVAPI Python CLI repo...
 
+```git clone https://github.com/AVAPI/avapi-python-cli.git; cd avapi-python-cli```
+
+Edit file to contain your API key...
+
+```sed -i 's\<changeme_apikey>\INSERT YOUR API KEY HERE\g' cli_tools/scanfile.osx.py```
+
+Scan a file...
+
+``````
