@@ -24,11 +24,11 @@ response = requests.get("%sv1/file/%s" % (POD, hash), headers={'X-Auth-Token':to
 if response.status_code == 200:
     response = json.loads(response.text)
     if response['result'] == "clean":
-        print " *** %s is safe" % sys.argv[1]
+        print " + %s is safe" % sys.argv[1]
     else:
-        print " *** %s is infected: %s" % (sys.argv[1], response['malware_name'])
+        print " + %s is infected: %s" % (sys.argv[1], response['malware_name'])
 elif response.status_code == 404:
-    print "*** No intelligence about file, submitting for analysis ***"
+    print " - No intelligence about file, submitting for analysis"
     os.popen("curl -X POST -H 'X-Auth-Token: %s' -H 'Content-Type: multipart/form-data' -F 'data=@%s' %sv1/file/new" % (token, sys.argv[1], POD)).read()
     lookup = True
     while (lookup):
@@ -36,9 +36,9 @@ elif response.status_code == 404:
         if response.status_code == 200:
             response = json.loads(response.text)
             if response['result'] == "clean":
-                print " *** %s is safe" % sys.argv[1]
+                print " + %s is safe" % sys.argv[1]
             else:
-                print " *** %s is infected: %s" % (sys.argv[1], response['malware_name'])
+                print " + %s is infected: %s" % (sys.argv[1], response['malware_name'])
             lookup = False
         elif response.status_code == 404:
             print " -  Waiting for scan result"
