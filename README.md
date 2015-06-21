@@ -33,7 +33,6 @@ Scan a file...
 ```avapiscan /var/log/messages```
 
 #### OSX
-Simple instructions to get you started, if you are experienced you may want to skip these instructions and do your own thing. To get up and running simply perform the following in a terminal entering your sudo password when requested (copy and paste friendly).
 
 Install Python setup tools...
 
