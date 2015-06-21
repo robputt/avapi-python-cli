@@ -24,6 +24,14 @@ Edit file to contain your API key, replace INSERT YOUR API KEY HERE with your AP
 
 ```sed -i 's/<apikey>/INSERT YOUR API KEY HERE/g' cli_tools/scanfile.linux.py```
 
+Copy to folder within path and make executable...
+
+```cp cli_tools/scanfile.linux.py /usr/bin/avapiscan; chmod 755 /usr/bin/avapiscan```
+
+Scan a file...
+
+```avapiscan /var/log/messages```
+
 #### OSX
 Simple instructions to get you started, if you are experienced you may want to skip these instructions and do your own thing. To get up and running simply perform the following in a terminal entering your sudo password when requested (copy and paste friendly).
 
