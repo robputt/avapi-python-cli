@@ -1,6 +1,29 @@
 # avapi-python-cli
 
 ### Installation
+#### Linux
+
+Install Python setup tools...
+
+```
+wget https://pypi.python.org/packages/source/s/setuptools/setuptools-17.1.1.tar.gz
+tar -xvf setuptools-17.1.1.tar.gz
+cd setuptools-17.1.1
+python setup.py install
+```
+
+Install Python requests module...
+
+```easy_install requests```
+
+Clone the AVAPI Python CLI repo...
+
+```git clone https://github.com/AVAPI/avapi-python-cli.git; cd avapi-python-cli```
+
+Edit file to contain your API key, replace INSERT YOUR API KEY HERE with your API Key, if you require an API key visit https://www.avapi.co...
+
+```sed -i '' 's/<apikey>/INSERT YOUR API KEY HERE/g' cli_tools/scanfile.osx.py```
+
 #### OSX
 Simple instructions to get you started, if you are experienced you may want to skip these instructions and do your own thing. To get up and running simply perform the following in a terminal entering your sudo password when requested (copy and paste friendly).
 
