@@ -70,7 +70,7 @@ Scan a file...
 Scan an individual file...
 
 ```
-avapiscan eicar.com
+avapiscan /home/samples/eicar/eicar.txt
  - Fetching Token
  - Checking Hash
  *** eicar.com is infected: EICAR_Test
