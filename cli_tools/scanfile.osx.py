@@ -5,7 +5,7 @@ import json
 import sys
 
 # Edit the follow line to set your API key.
-API_KEY = "my_api_key_here"
+API_KEY = "<apikey>"
 
 # DO NOT EDIT BELOW THIS LINE
 POD = "http://%s.avapi.co/" % API_KEY.split("-")[0]
