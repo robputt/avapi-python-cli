@@ -32,6 +32,8 @@ Scan a file...
 ### Usage
 #### OSX
 
+Scan an individual file...
+
 ```
 python cli_tools/scanfile.osx.py /var/log/wifi.log
  - Fetching Token
@@ -43,3 +45,9 @@ python cli_tools/scanfile.osx.py /var/log/wifi.log
  -  Waiting for scan result
  + /var/log/wifi.log is safe
  ```
+
+Recursively scan a whole directory (in this case ~/Downloads)...
+
+```
+find ~/Downloads -type f -size -100M -not -path '*/\.*' -exec python cli_tools/scanfile.osx.py {} \;
+```
