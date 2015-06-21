@@ -56,17 +56,38 @@ Edit file to contain your API key, replace INSERT YOUR API KEY HERE with your AP
 
 ```sed -i '' 's/<apikey>/INSERT YOUR API KEY HERE/g' cli_tools/scanfile.osx.py```
 
+Copy to folder within path and make executable...
+
+```sudo cp cli_tools/scanfile.osx.py /usr/bin/avapiscan; sudo chmod 755 /usr/bin/avapiscan```
+
 Scan a file...
 
-```python cli_tools/scanfile.osx.py <path_to_file>```
+```avapiscan /var/log/wifi.log```
 
 ### Usage
+#### Linux
+
+Scan an individual file...
+
+```
+avapiscan eicar.com
+ - Fetching Token
+ - Checking Hash
+ *** eicar.com is infected: EICAR_Test
+```
+
+Recursively scan a whole directory...
+
+```
+find /var/log/ -type f -size -100M -not -path '*/\.*' -exec avapiscan {} \;
+```
+
 #### OSX
 
 Scan an individual file...
 
 ```
-python cli_tools/scanfile.osx.py /var/log/wifi.log
+avapiscan /var/log/wifi.log
  - Fetching Token
  - Checking Hash
  - No intelligence about file, submitting for analysis
@@ -77,8 +98,8 @@ python cli_tools/scanfile.osx.py /var/log/wifi.log
  + /var/log/wifi.log is safe
  ```
 
-Recursively scan a whole directory (in this case ~/Downloads)...
+Recursively scan a whole directory...
 
 ```
-find ~/Downloads -type f -size -100M -not -path '*/\.*' -exec python cli_tools/scanfile.osx.py {} \;
+find ~/Downloads -type f -size -100M -not -path '*/\.*' -exec avapiscan {} \;
 ```
