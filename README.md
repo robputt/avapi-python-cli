@@ -6,10 +6,12 @@ Simple instructions to get you started, if you are experienced you may want to s
 
 Install Python setup tools...
 
-```curl -o setuptools.tar.gz https://pypi.python.org/packages/source/s/setuptools/setuptools-17.1.1.tar.gz#md5=7edec6cc30aca5518fa9bad42ff0179b;
+```
+curl -o setuptools.tar.gz https://pypi.python.org/packages/source/s/setuptools/setuptools-17.1.1.tar.gz#md5=7edec6cc30aca5518fa9bad42ff0179b;
 tar -xvf setuptools.tar.gz;
 cd setuptools-17.1.1;
-sudo python setup.py install```
+sudo python setup.py install
+```
 
 Install Python requests module...
 
@@ -30,7 +32,8 @@ Scan a file...
 ### Usage
 #### OSX
 
-```python cli_tools/scanfile.osx.py /var/log/wifi.log
+```
+python cli_tools/scanfile.osx.py /var/log/wifi.log
  - Fetching Token
  - Checking Hash
  - No intelligence about file, submitting for analysis
@@ -38,4 +41,5 @@ Scan a file...
                                  Dload  Upload   Total   Spent    Left  Speed
 100  234k    0    20  100  234k      4  55387  0:00:04  0:00:04 --:--:--     0
  -  Waiting for scan result
- + /var/log/wifi.log is safe```
+ + /var/log/wifi.log is safe
+ ```
