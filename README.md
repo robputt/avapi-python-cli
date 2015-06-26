@@ -72,7 +72,7 @@ Scan an individual file...
 avapiscan /home/samples/eicar/eicar.txt
  - Fetching Token
  - Checking Hash
- *** eicar.com is infected: EICAR_Test
+ + eicar.com is infected: EICAR_Test
 ```
 
 Recursively scan a whole directory...
