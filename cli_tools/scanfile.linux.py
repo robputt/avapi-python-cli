@@ -10,10 +10,10 @@ import sys
 API_KEY = "<apikey>"
 
 # DO NOT EDIT BELOW THIS LINE
-POD = "http://%s.avapi.co/" % API_KEY.split("-")[0]
+POD = "https://%s.avapi.co/" % API_KEY.split("-")[0]
 
 print " - Fetching Token"
-response = requests.post("%sv1/token" % POD, data=json.dumps({'api_key':API_KEY}), verify=False)
+response = requests.post("%sv1/token" % POD, data=json.dumps({'api_key':API_KEY}))
 response = json.loads(response.text)
 token = response['token']
 
