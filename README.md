@@ -1,5 +1,8 @@
 # avapi-python-cli
 
+### ToDo
+- Sort out token caching to stop new token requests with each run.
+
 ### Installation
 #### Linux
 
@@ -79,6 +82,12 @@ Recursively scan a whole directory...
 
 ```
 find /var/log/ -type f -size -100M -not -path '*/\.*' -exec avapiscan {} \;
+```
+
+Recursively scan a whole directory using a few processes at a time...
+
+```
+find /var/log -type f -size -100M -not -path '*/\.*' -print0 | xargs -0 -P 5 -n 1 avapiscan
 ```
 
 #### OSX
